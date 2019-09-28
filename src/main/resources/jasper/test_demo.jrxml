@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mysqltemp" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be7385da-edc4-43ff-aa33-46d0282a8bab">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="94"/>
+	<queryString language="SQL">
+		<![CDATA[select * from sales]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Seller" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sales" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Apple" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Orange" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Milk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="19" width="148" height="38" uuid="fefbb04c-77fa-4a5f-a2d3-0341ded9feef"/>
+				<textElement textAlignment="Justified">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[区域销售情况]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="116" y="22" width="47" height="20" uuid="974ce477-7584-4034-9b4c-8ba386e2bfe0"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[销售员]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="22" width="40" height="20" uuid="a46a1ccf-5bcc-4591-a139-2846db9fe0a7"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[苹果]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="22" width="60" height="20" uuid="7f4f83d4-3096-43fc-971c-05483fd4adc8"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[橙子]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="22" width="43" height="20" uuid="b10d5790-6321-4521-8078-2cfd27ba3080"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[牛奶]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="22" width="67" height="20" uuid="c0acc475-6ae7-409b-9965-dc0dbffaee3f"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[销售金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="67" height="20" uuid="337618fb-2414-44e2-a513-4edf5bbd350e"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[销售区域]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="2" width="72" height="20" uuid="79ad8e5e-ba3b-40ca-892e-f30686a30920"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[销售业绩]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="42" width="555" height="1" uuid="b0537584-5ce5-4c5f-a2e4-c83d3a74da4b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="239" y="0" width="59" height="20" uuid="145d3950-ab64-4594-818b-0d34c79e60aa"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Apple}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="60" height="20" uuid="7ff55d8c-1dec-4ae2-837f-c93149f5efea"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Orange}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="43" height="20" uuid="6df682f8-9f94-4221-a092-9221b0ee34f9"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Milk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="67" height="20" uuid="cbc33156-6280-4a36-92ea-e0b6c82c0955"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="45" height="20" uuid="2411128f-e583-403d-8be2-16b5deabab5b"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="47" height="20" uuid="36fed324-5146-495b-a397-bcc6bfd6f583"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Seller}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="ba116ce1-fd1b-4a15-928e-3e180e8721a5"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="375" y="34" width="15" height="20" uuid="b0e4b1da-854e-478c-be60-a56df65ec245"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[第]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="34" width="21" height="20" uuid="b5831a23-d767-49be-9cc7-50a150ee1d65"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="34" width="19" height="20" uuid="f0d3d601-3a89-4702-8e36-a2875d6b8ac0"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="34" width="13" height="20" uuid="de05dbf6-4174-4b75-a4af-f62aae04486e"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[共]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="487" y="34" width="18" height="20" uuid="a53aadbe-71fb-4ba8-9cdb-f0b655f8e415"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="505" y="34" width="14" height="20" uuid="44b81cf6-bd2a-4814-9bbf-4eb3102ff39f"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="53" width="555" height="1" uuid="5fbcbe4d-48fc-4f72-83ae-917f84718175"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

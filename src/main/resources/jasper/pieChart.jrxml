@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pieChart" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="353c0d1f-293b-4842-8855-a5e1d2cf5f3c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT DEPT_NAME, COUNT(DEPT_NAME)
+FROM STORAGE.SYS_DEPT
+GROUP BY DEPT_NAME]]>
+	</queryString>
+	<field name="DEPT_NAME" class="java.lang.String"/>
+	<field name="COUNT(DEPT_NAME)" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="2" width="100" height="20" uuid="08c7b0d4-82da-4e1a-9d4c-040399496780"/>
+				<text><![CDATA[DEPT_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="652" y="2" width="100" height="20" uuid="d1090e64-8414-49dc-a0ed-0f03bbd70fba"/>
+				<text><![CDATA[COUNT(DEPT_NAME)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="200" splitType="Stretch">
+			<pie3DChart>
+				<chart>
+					<reportElement x="175" y="0" width="412" height="200" uuid="87aa77fd-ef69-4f2c-89e4-11e5facb63b5"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{DEPT_NAME}]]></keyExpression>
+					<valueExpression><![CDATA[$F{COUNT(DEPT_NAME)}.intValue()]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<textField>
+				<reportElement x="64" y="35" width="100" height="20" uuid="d0d43c69-9bf5-4f18-864a-4c6358ae0c59"/>
+				<textFieldExpression><![CDATA[$F{DEPT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="652" y="94" width="100" height="20" uuid="8d673c99-b79b-4e6c-994d-ea52d3b54280"/>
+				<textFieldExpression><![CDATA[$F{COUNT(DEPT_NAME)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

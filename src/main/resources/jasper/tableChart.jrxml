@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="table" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4fbb9c5f-d915-4271-b825-a7170c698519">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT SCI_NAME, SCI_PAYABLE, SCI_IDENTIFICATION_NO, SCI_OPEN_BANK, SCI_BANK_PHONE
+FROM STORAGE.STORAGE_CUSTOMER_INVOICEINFO]]>
+	</queryString>
+	<field name="SCI_NAME" class="java.lang.String"/>
+	<field name="SCI_PAYABLE" class="java.lang.String"/>
+	<field name="SCI_IDENTIFICATION_NO" class="java.lang.String"/>
+	<field name="SCI_OPEN_BANK" class="java.lang.String"/>
+	<field name="SCI_BANK_PHONE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="218" y="22" width="100" height="37" uuid="c4c42342-2525-44aa-b8de-b5d164a5af3e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="24"/>
+				</textElement>
+				<text><![CDATA[开票信息]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="58" height="20" uuid="9f2ef352-63db-4786-b2dc-d4f0bc253b33"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[开户名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="2" width="53" height="20" uuid="1c2b305e-2abd-4b6d-a843-effbf5a6b683"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[开票抬头]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="0" width="69" height="20" uuid="392d3e0c-74f0-452a-9010-f0cf7b77f219"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[纳税识别码]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="2" width="46" height="20" uuid="df6ce5a7-8ac8-408b-be5e-d5f3442bf4c7"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[开户行]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="2" width="54" height="20" uuid="f2cca8d3-1ba8-4cc6-b46b-113b4f23cd6d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="555" height="1" uuid="6632479d-fa4f-4118-a7cf-3837cf95f61f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="244" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="5c596042-1c52-4773-aeb8-6d4bcb68e1ab"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SCI_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="81" height="20" uuid="6f93d292-24ab-40c6-ba00-59ab3a679d3e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SCI_PAYABLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="236" y="0" width="82" height="20" uuid="9b34a922-4b72-4520-be7e-92d7c1332000"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{SCI_IDENTIFICATION_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="66" height="20" uuid="b51791b1-f17c-4955-ae2b-db44df3e0214"/>
+				<textElement textAlignment="Justified">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SCI_OPEN_BANK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="0" width="76" height="20" uuid="55c17cc4-b63c-40f6-ba72-a06b3882cb73"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{SCI_BANK_PHONE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="378" y="16" width="17" height="20" uuid="77527cd5-f441-42c4-8976-508dd8041019"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[第]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="16" width="18" height="20" uuid="1332f01b-6689-44fd-b94b-91717657f30f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="16" width="11" height="20" uuid="51625f17-ae28-4229-884a-31359243d9cb"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="16" width="16" height="20" uuid="7b662225-1bad-4037-bc95-b5b369b732dc"/>
+				<text><![CDATA[共]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="479" y="16" width="22" height="20" uuid="492811ea-f2cf-445b-8058-ef0bb7fa6482"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="501" y="16" width="21" height="20" uuid="e154be40-2ec1-4ff9-b9dc-04dfb3f1e4aa"/>
+				<text><![CDATA[页]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>
